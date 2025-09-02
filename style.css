@@ -159,7 +159,7 @@ body {
 }
 
 .sobre-titulo {
-  font-size: 12rem;
+  font-size: 11rem;
   font-weight: 900;
   margin-bottom: 30px;
   font-family: "League Gothic", sans-serif;
@@ -398,7 +398,7 @@ body {
 
 .projeto-content p {
   font-family: "VT323", monospace;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.4;
   color: #ddd;
   margin-bottom: 20px;
@@ -462,7 +462,7 @@ body {
 }
 
 .skill-card h3 {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-family: "League Gothic", sans-serif;
   text-transform: uppercase;
   margin-bottom: 15px;
@@ -471,7 +471,7 @@ body {
 
 .skill-card p {
   font-family: "VT323", monospace;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #ddd;
   line-height: 1.4;
 }
@@ -518,7 +518,7 @@ body {
 }
 
 .soft-skill-card h3 {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-family: "League Gothic", sans-serif;
   text-transform: uppercase;
   margin-bottom: 15px;
@@ -527,7 +527,7 @@ body {
 
 .soft-skill-card p {
   font-family: "VT323", monospace;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   color: #ddd;
   line-height: 1.4;
 }
@@ -606,7 +606,7 @@ body {
 }
 
 .timeline-content h3 {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-family: "League Gothic", sans-serif;
   text-transform: uppercase;
   margin-bottom: 10px;
@@ -614,7 +614,7 @@ body {
 }
 
 .timeline-content h4 {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-family: "VT323", monospace;
   color: #eb4604;
   margin-bottom: 15px;
@@ -623,7 +623,7 @@ body {
 
 .timeline-content p {
   font-family: "VT323", monospace;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #ddd;
   line-height: 1.4;
 }
@@ -670,7 +670,7 @@ body {
 }
 
 .curso-card h3 {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-family: "League Gothic", sans-serif;
   text-transform: uppercase;
   margin-bottom: 10px;
@@ -679,7 +679,7 @@ body {
 
 .curso-card p {
   font-family: "VT323", monospace;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #ddd;
   margin-bottom: 15px;
 }
@@ -733,7 +733,7 @@ body {
 }
 
 .section-title-white {
-  font-size: 5rem;
+  font-size: 11rem;
   font-weight: 900;
   margin-bottom: 20px;
   font-family: "League Gothic", sans-serif;
@@ -743,7 +743,7 @@ body {
 }
 
 .contato-subtitle {
-  font-size: 1.2rem;
+  font-size: 2rem;
   font-family: "VT323", monospace;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -779,7 +779,7 @@ body {
 }
 
 .contato-item h3 {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-family: "League Gothic", sans-serif;
   text-transform: uppercase;
   margin-bottom: 15px;
@@ -788,7 +788,7 @@ body {
 
 .contato-item p {
   font-family: "VT323", monospace;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: white;
   line-height: 1.4;
 }
