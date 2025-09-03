@@ -14,25 +14,37 @@
   </head>
 
   <body>
-    <!-- Navigation -->
-    <nav class="navbar">
+    <!-- Adicionando loading screen profissional -->
+    <div class="loading-screen" id="loadingScreen">
+      <div class="loading-content">
+        <div class="loading-logo">
+          <span class="loading-text">Daniel Kirmse</span>
+          <div class="loading-bar">
+            <div class="loading-progress"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navegação com efeito blur e animações -->
+    <nav class="navbar" id="navbar">
       <div class="nav-container">
         <ul class="nav-menu">
-          <li class="nav-item"><a href="#home">Home</a></li>
-          <li class="nav-item"><a href="#sobre">Sobre Mim</a></li>
-          <li class="nav-item"><a href="#projetos">Projetos</a></li>
-          <li class="nav-item"><a href="#hard-skills">Hard Skills</a></li>
-          <li class="nav-item"><a href="#soft-skills">Soft Skills</a></li>
-          <li class="nav-item"><a href="#experiencia">Experiência</a></li>
-          <li class="nav-item"><a href="#cursos">Cursos</a></li>
-          <li class="nav-item"><a href="#contato">Contato</a></li>
+          <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="#sobre" class="nav-link">Sobre Mim</a></li>
+          <li class="nav-item"><a href="#projetos" class="nav-link">Projetos</a></li>
+          <li class="nav-item"><a href="#hard-skills" class="nav-link">Hard Skills</a></li>
+          <li class="nav-item"><a href="#soft-skills" class="nav-link">Soft Skills</a></li>
+          <li class="nav-item"><a href="#experiencia" class="nav-link">Experiência</a></li>
+          <li class="nav-item"><a href="#cursos" class="nav-link">Cursos</a></li>
+          <li class="nav-item"><a href="#contato" class="nav-link">Contato</a></li>
         </ul>
       </div>
     </nav>
 
     <!-- Home Section -->
-    <section id="home" class="Home-section">
-      <div class="Home-left">
+    <section id="home" class="Home-section animate-on-scroll">
+      <div class="Home-left fade-in-left">
         <h1 class="Home-name">
           Daniel<br />
           Kirmse
@@ -41,7 +53,7 @@
           Desenvolvedor Web & Técnico em Eletrotécnica
         </p>
       </div>
-      <div class="Home-right">
+      <div class="Home-right fade-in-right">
         <div class="gray-rectangle"></div>
         <img class="Home-image" src="images/fotos/daniel-kirmse.jpg" alt="Minha foto" />
         <div class="light"></div>
@@ -49,16 +61,16 @@
     </section>
 
     <!-- Sobre Mim Section -->
-    <section id="sobre" class="sobre-section">
+    <section id="sobre" class="sobre-section animate-on-scroll">
       <div class="sobre-container">
-        <div class="sobre-left">
+        <div class="sobre-left fade-in-up">
           <h1 class="sobre-titulo">SOBRE MIM</h1>
           <p class="frase-impacto">
             Criar soluções em tecnologia com foco em eficiência e impacto real.
           </p>
 
           <div class="cards">
-            <div class="card">
+            <div class="card stagger-animation" style="animation-delay: 0.1s">
               <h3>Quem sou</h3>
               <p>
                 Meu nome é Daniel Kirmse, sou estudante de desenvolvimento de
@@ -69,7 +81,7 @@
                 back-end, front-end e automação.
               </p>
             </div>
-            <div class="card">
+            <div class="card stagger-animation" style="animation-delay: 0.2s">
               <h3>O que faço</h3>
               <p>
                 Desenvolvo aplicações web com Node.js, Python (Flask) e MySQL.
@@ -81,7 +93,7 @@
             </div>
           </div>
 
-          <div class="timeline">
+          <div class="timeline fade-in-up" style="animation-delay: 0.3s">
             <div class="timeline-step">
               <div class="step-label">2022</div>
               <div class="step-sublabel">Início no SESI</div>
@@ -97,9 +109,9 @@
           </div>
         </div>
 
-        <div class="sobre-right">
+        <div class="sobre-right fade-in-right">
           <div class="sobre-box">
-            <div class="quotation-mark">“</div>
+            <div class="quotation-mark">"</div>
             <div class="img-box">
               <img
                 class="sobre-foto"
@@ -129,15 +141,15 @@
     </section>
 
     <!-- Projetos Section -->
-    <section id="projetos" class="projetos-section">
+    <section id="projetos" class="projetos-section animate-on-scroll">
       <div class="projetos-container">
-        <h1 class="section-title">PROJETOS</h1>
-        <p class="section-subtitle">
+        <h1 class="section-title fade-in-up">PROJETOS</h1>
+        <p class="section-subtitle fade-in-up" style="animation-delay: 0.1s">
           Alguns dos trabalhos que desenvolvi na área de tecnologia.
         </p>
 
         <!-- Carousel Container -->
-        <div class="carousel-wrapper">
+        <div class="carousel-wrapper fade-in-up" style="animation-delay: 0.2s">
           <!-- Main Project Display -->
           <div class="project-display" id="projectDisplay">
             <div class="project-grid">
@@ -212,11 +224,11 @@
     </section>
 
     <!-- Hard Skills Section -->
-    <section id="hard-skills" class="hard-skills-section">
+    <section id="hard-skills" class="hard-skills-section animate-on-scroll">
       <div class="skills-container">
-        <h1 class="section-title">HARD SKILLS</h1>
+        <h1 class="section-title fade-in-up">HARD SKILLS</h1>
         <div class="skills-grid">
-          <div class="skill-card">
+          <div class="skill-card stagger-animation" style="animation-delay: 0.1s">
             <div class="skill-icon">
               <img src="images/icons/icons8-node-js-50.png" />
             </div>
@@ -224,7 +236,7 @@
             <p>Back-end rápido e escalável</p>
           </div>
 
-          <div class="skill-card">
+          <div class="skill-card stagger-animation" style="animation-delay: 0.2s">
             <div class="skill-icon">
               <img src="images/icons/icons8-arduino-50.png" />
             </div>
@@ -232,7 +244,7 @@
             <p>Automação e IoT</p>
           </div>
 
-          <div class="skill-card">
+          <div class="skill-card stagger-animation" style="animation-delay: 0.3s">
             <div class="skill-icon">
               <img src="images/icons/icons8-unidade-50.png" />
             </div>
@@ -240,7 +252,7 @@
             <p>Desenvolvimento de jogos</p>
           </div>
 
-          <div class="skill-card">
+          <div class="skill-card stagger-animation" style="animation-delay: 0.4s">
             <div class="skill-icon">
               <img src="images/icons/icons8-frasco-50.png" />
             </div>
@@ -248,7 +260,7 @@
             <p>APIs e sistemas web</p>
           </div>
 
-          <div class="skill-card">
+          <div class="skill-card stagger-animation" style="animation-delay: 0.5s">
             <div class="skill-icon">
               <img src="images/icons/icons8-javascript-48.png" />
               <img src="images/icons/icons8-html-48.png" />
@@ -257,13 +269,13 @@
             <p>Desenvolvimento front-end</p>
           </div>
 
-          <div class="skill-card">
+          <div class="skill-card stagger-animation" style="animation-delay: 0.6s">
             <div class="skill-icon">⚡</div>
             <h3>Eletrotécnica</h3>
             <p>Projetos elétricos industriais e prediais</p>
           </div>
 
-          <div class="skill-card">
+          <div class="skill-card stagger-animation" style="animation-delay: 0.7s">
             <div class="skill-icon">
               <img src="images/icons/icons8-sql-50.png" />
             </div>
@@ -271,7 +283,7 @@
             <p>Banco de dados relacionais</p>
           </div>
 
-          <div class="skill-card">
+          <div class="skill-card stagger-animation" style="animation-delay: 0.8s">
             <div class="skill-icon">
               <img src="images/icons/icons8-git-48.png" />
             </div>
@@ -283,36 +295,36 @@
     </section>
 
     <!-- Soft Skills Section -->
-    <section id="soft-skills" class="soft-skills-section">
+    <section id="soft-skills" class="soft-skills-section animate-on-scroll">
       <div class="soft-skills-container">
-        <h1 class="section-title">SOFT SKILLS</h1>
+        <h1 class="section-title fade-in-up">SOFT SKILLS</h1>
         <div class="soft-skills-grid">
-          <div class="soft-skill-card">
+          <div class="soft-skill-card stagger-animation" style="animation-delay: 0.1s">
             <div class="soft-skill-icon">💡</div>
             <h3>Criatividade</h3>
             <p>Soluções inovadoras para problemas complexos</p>
           </div>
-          <div class="soft-skill-card">
+          <div class="soft-skill-card stagger-animation" style="animation-delay: 0.2s">
             <div class="soft-skill-icon">👥</div>
             <h3>Trabalho em Equipe</h3>
             <p>Colaboração efetiva em projetos</p>
           </div>
-          <div class="soft-skill-card">
+          <div class="soft-skill-card stagger-animation" style="animation-delay: 0.3s">
             <div class="soft-skill-icon">⏰</div>
             <h3>Organização</h3>
             <p>Gestão eficiente de tempo e tarefas</p>
           </div>
-          <div class="soft-skill-card">
+          <div class="soft-skill-card stagger-animation" style="animation-delay: 0.4s">
             <div class="soft-skill-icon">📚</div>
             <h3>Aprendizado Contínuo</h3>
             <p>Sempre em busca de novos conhecimentos</p>
           </div>
-          <div class="soft-skill-card">
+          <div class="soft-skill-card stagger-animation" style="animation-delay: 0.5s">
             <div class="soft-skill-icon">🎯</div>
             <h3>Foco</h3>
             <p>Concentração em objetivos e resultados</p>
           </div>
-          <div class="soft-skill-card">
+          <div class="soft-skill-card stagger-animation" style="animation-delay: 0.6s">
             <div class="soft-skill-icon">🔍</div>
             <h3>Atenção aos Detalhes</h3>
             <p>Precisão na execução de projetos</p>
@@ -322,11 +334,11 @@
     </section>
 
     <!-- Experiência Section -->
-    <section id="experiencia" class="experiencia-section">
+    <section id="experiencia" class="experiencia-section animate-on-scroll">
       <div class="experiencia-container">
-        <h1 class="section-title">EXPERIÊNCIA</h1>
+        <h1 class="section-title fade-in-up">EXPERIÊNCIA</h1>
         <div class="timeline-vertical">
-          <div class="timeline-item">
+          <div class="timeline-item fade-in-up" style="animation-delay: 0.2s">
             <div class="timeline-date">2024 - Atual</div>
             <div class="timeline-content">
               <div class="timeline-icon">🏢</div>
@@ -343,11 +355,11 @@
     </section>
 
     <!-- Cursos Section -->
-    <section id="cursos" class="cursos-section">
+    <section id="cursos" class="cursos-section animate-on-scroll">
       <div class="cursos-container">
-        <h1 class="section-title">CURSOS</h1>
+        <h1 class="section-title fade-in-up">CURSOS</h1>
         <div class="cursos-grid">
-          <div class="curso-card">
+          <div class="curso-card stagger-animation" style="animation-delay: 0.1s">
             <div class="curso-icon">
               <img src="images/icons/icons8-laptop-coding-50.png" />
             </div>
@@ -355,13 +367,13 @@
             <p>SENAI Civit</p>
             <span class="curso-status">Em andamento</span>
           </div>
-          <div class="curso-card">
+          <div class="curso-card stagger-animation" style="animation-delay: 0.2s">
             <div class="curso-icon">⚡</div>
             <h3>Técnico em Eletrotécnica</h3>
             <p>SENAI Civit</p>
             <span class="curso-status">Concluído</span>
           </div>
-          <div class="curso-card">
+          <div class="curso-card stagger-animation" style="animation-delay: 0.3s">
             <div class="curso-icon">
               <img src="images/icons/icons8-arduino-50.png" />
             </div>
@@ -369,7 +381,7 @@
             <p>Módulo do Curso de Eletrotécnica</p>
             <span class="curso-status">Concluído</span>
           </div>
-          <div class="curso-card">
+          <div class="curso-card stagger-animation" style="animation-delay: 0.4s">
             <div class="curso-icon">
               <img src="images/icons/icons8-unidade-50.png" />
             </div>
@@ -377,13 +389,13 @@
             <p>Módulo do Curso de Desenvolvimento de Sistemas</p>
             <span class="curso-status">Em Andamento</span>
           </div>
-          <div class="curso-card">
+          <div class="curso-card stagger-animation" style="animation-delay: 0.5s">
             <div class="curso-icon">🌐</div>
             <h3>Desenvolvimento Web</h3>
             <p>Módulo do Curso de Desenvolvimento de Sistemas</p>
             <span class="curso-status">Em Andamento</span>
           </div>
-          <div class="curso-card">
+          <div class="curso-card stagger-animation" style="animation-delay: 0.6s">
             <div class="curso-icon">
               <img src="images/icons/icons8-frasco-50.png" />
             </div>
@@ -396,18 +408,19 @@
     </section>
 
     <!-- Contato Section -->
-    <section id="contato" class="contato-section">
+    <section id="contato" class="contato-section animate-on-scroll">
       <div class="contato-overlay"></div>
       <div class="contato-container">
-        <h1 class="section-title-white">CONTATO</h1>
-        <p class="contato-subtitle">
+        <h1 class="section-title-white fade-in-up">CONTATO</h1>
+        <p class="contato-subtitle fade-in-up" style="animation-delay: 0.1s">
           Vamos conversar sobre tecnologia e oportunidades!
         </p>
 
         <div class="contato-grid">
           <a
             href="mailto:oliveira.daniel.030207@gmail.com"
-            class="contato-item"
+            class="contato-item stagger-animation"
+            style="animation-delay: 0.2s"
           >
             <div class="contato-icon"><img src="images/icons/icons8-gmail-novo-48.png"></div>
             <h3>Email</h3>
@@ -416,7 +429,8 @@
 
           <a
             href="https://linkedin.com/in/daniel-de-oliveira-souza"
-            class="contato-item"
+            class="contato-item stagger-animation"
+            style="animation-delay: 0.3s"
           >
             <div class="contato-icon"><img src="images/icons/icons8-linkedin-48.png"></div>
             <h3>LinkedIn</h3>
@@ -425,21 +439,22 @@
 
           <a
             href="https://github.com/daniel-oliveira-kirmse"
-            class="contato-item"
+            class="contato-item stagger-animation"
+            style="animation-delay: 0.4s"
           >
             <div class="contato-icon"><img src="images/icons/icons8-github-50.png"></div>
             <h3>GitHub</h3>
             <p>github.com/daniel-oliveira-kirmse</p>
           </a>
 
-          <a href="https://wa.me/5527992994348" class="contato-item">
+          <a href="https://wa.me/5527992994348" class="contato-item stagger-animation" style="animation-delay: 0.5s">
             <div class="contato-icon"><img src="images/icons/icons8-whatsapp-48.png"></div>
             <h3>WhatsApp</h3>
             <p>(27) 99299-4348</p>
           </a>
         </div>
 
-        <div class="contato-cta">
+        <div class="contato-cta fade-in-up" style="animation-delay: 0.6s">
           <p>Interessado em colaborar? Entre em contato!</p>
         </div>
       </div>
