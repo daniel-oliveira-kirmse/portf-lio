@@ -235,13 +235,13 @@ body {
 
 .card h3 {
   margin-bottom: 15px;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   font-family: "VT323", monospace;
   text-transform: uppercase;
 }
 
 .card p {
-  font-size: 0.9rem;
+  font-size: 1.15rem;
   margin-bottom: 8px;
   font-family: "VT323", monospace;
   line-height: 1.2;
@@ -285,7 +285,7 @@ body {
 
 .step-sublabel {
   font-family: "VT323", monospace;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   color: #eb4604;
   text-transform: uppercase;
 }
@@ -332,8 +332,8 @@ body {
 }
 
 .sobre-foto {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
   border-radius: 8px;
 }
@@ -348,7 +348,7 @@ body {
 }
 
 .sobre-texto p {
-  font-size: 1rem;
+  font-size: 1.5rem;
   line-height: 1.2;
   margin-bottom: 12px;
   text-align: justify;
