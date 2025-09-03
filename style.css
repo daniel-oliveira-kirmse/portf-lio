@@ -316,7 +316,7 @@ body {
 /* ESTILOS DAS SEÇÕES ADICIONADAS */
 /* ============================== */
 
-/* Projetos Section */
+/* Projetos Section com Carrossel */
 .projetos-section {
   min-height: 100vh;
   width: 100%;
@@ -333,92 +333,140 @@ body {
   width: 100%;
 }
 
-.section-title {
-  font-size: 11rem;
-  font-weight: 900;
-  margin-bottom: 20px;
-  font-family: "League Gothic", sans-serif;
-  text-transform: uppercase;
-  letter-spacing: -2px;
-  text-align: center;
+.carousel-wrapper {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.section-subtitle {
-  font-size: 2rem;
-  font-family: "VT323", monospace;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 60px;
-  color: white;
-  text-align: center;
-}
-
-.projetos-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
-  gap: 40px;
-}
-
-.projeto-card {
+.project-display {
   background: #282723;
-  border-radius: 12px;
+  border-radius: 16px;
   overflow: hidden;
-  display: flex;
-  border-left: 4px solid #eb4604;
-  transition: transform 0.3s ease;
+  box-shadow: 0 10px 30px -10px rgba(235, 70, 4, 0.3);
 }
 
-.projeto-card:hover {
-  transform: translateY(-5px);
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
 }
 
-.projeto-image {
-  flex: 1;
-  max-width: 300px;
+.project-image {
+  position: relative;
+  overflow: hidden;
 }
 
-.projeto-image img {
+.project-image img {
   width: 100%;
-  height: 200px;
+  height: 400px;
   object-fit: cover;
+  transition: transform 0.5s ease;
 }
 
-.projeto-content {
-  flex: 1;
-  padding: 30px;
+.project-image img:hover {
+  transform: scale(1.05);
 }
 
-.projeto-content h3 {
-  font-size: 1.5rem;
+.project-content {
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project-content h3 {
+  font-size: 2.5rem;
   font-family: "League Gothic", sans-serif;
   text-transform: uppercase;
-  margin-bottom: 15px;
-  color: white;
+  color: #eb4604;
+  margin-bottom: 20px;
+  font-weight: 900;
 }
 
-.projeto-content p {
+.project-content p {
   font-family: "VT323", monospace;
   font-size: 1.2rem;
-  line-height: 1.4;
+  line-height: 1.6;
   color: #ddd;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
-.projeto-tech {
+.project-tech {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 12px;
 }
 
 .tech-tag {
   background: #eb4604;
   color: white;
-  padding: 5px 12px;
+  padding: 8px 16px;
   border-radius: 20px;
   font-family: "VT323", monospace;
   font-size: 0.9rem;
   text-transform: uppercase;
 }
+
+.carousel-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.carousel-btn {
+  background: rgba(40, 39, 35, 0.8);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(235, 70, 4, 0.2);
+  color: #eb4604;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px -10px rgba(235, 70, 4, 0.3);
+}
+
+.carousel-btn:hover {
+  background: #eb4604;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.carousel-indicators {
+  display: flex;
+  gap: 12px;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #666;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicator.active {
+  background: #eb4604;
+}
+
+.project-counter {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.project-counter span {
+  font-family: "VT323", monospace;
+  color: #ddd;
+  font-size: 1.1rem;
+}
+
 
 /* Hard Skills Section */
 .hard-skills-section {
@@ -708,19 +756,13 @@ body {
   position: relative;
 }
 
-.contato-section::before {
-  content: "";
+.contato-overlay {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(
-    ellipse at center,
-    rgba(235, 70, 4, 0.9) 0%,
-    rgba(235, 70, 4, 0.7) 50%,
-    rgba(235, 70, 4, 1) 100%
-  );
+  background: linear-gradient(135deg, rgba(235, 70, 4, 0.9) 0%, rgba(235, 70, 4, 0.7) 50%, rgba(235, 70, 4, 1) 100%);
   pointer-events: none;
 }
 
@@ -730,16 +772,6 @@ body {
   position: relative;
   z-index: 2;
   text-align: center;
-}
-
-.section-title-white {
-  font-size: 11rem;
-  font-weight: 900;
-  margin-bottom: 20px;
-  font-family: "League Gothic", sans-serif;
-  text-transform: uppercase;
-  letter-spacing: -2px;
-  color: white;
 }
 
 .contato-subtitle {
@@ -754,7 +786,7 @@ body {
 .contato-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 40px;
+  gap: 30px;
   margin-bottom: 60px;
 }
 
@@ -765,12 +797,16 @@ body {
   text-align: center;
   backdrop-filter: blur(10px);
   border: 2px solid rgba(255, 255, 255, 0.2);
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: white;
+  display: block;
 }
 
 .contato-item:hover {
   transform: translateY(-5px);
   background: rgba(255, 255, 255, 0.2);
+  color: white;
 }
 
 .contato-icon {
@@ -791,6 +827,7 @@ body {
   font-size: 1.2rem;
   color: white;
   line-height: 1.4;
+  word-break: break-word;
 }
 
 .contato-cta {
@@ -807,6 +844,7 @@ body {
   text-transform: uppercase;
   color: white;
   margin: 0;
+  font-weight: bold;
 }
 
 /* Smooth scrolling */
