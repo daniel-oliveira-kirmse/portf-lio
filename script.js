@@ -122,6 +122,46 @@ document.addEventListener("DOMContentLoaded", () => {
       tag.style.transform = "translateY(0) scale(1)"
     })
   })
+
+  // Mobile Menu Toggle
+  const mobileMenuToggle = document.getElementById("mobileMenuToggle")
+  const mobileMenu = document.getElementById("mobileMenu")
+  const mobileNavLinks = document.querySelectorAll(".mobile-nav-link")
+
+  // Toggle mobile menu
+  mobileMenuToggle.addEventListener("click", () => {
+    mobileMenuToggle.classList.toggle("active")
+    mobileMenu.classList.toggle("active")
+  })
+
+  // Close mobile menu when clicking on a link
+  mobileNavLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault()
+      const targetId = link.getAttribute("href")
+      const targetSection = document.querySelector(targetId)
+
+      if (targetSection) {
+        // Close mobile menu
+        mobileMenuToggle.classList.remove("active")
+        mobileMenu.classList.remove("active")
+
+        // Smooth scroll to section
+        targetSection.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        })
+      }
+    })
+  })
+
+  // Close mobile menu when clicking outside
+  document.addEventListener("click", (e) => {
+    if (!mobileMenuToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
+      mobileMenuToggle.classList.remove("active")
+      mobileMenu.classList.remove("active")
+    }
+  })
 })
 
 // Sistema de carrossel melhorado com animações
