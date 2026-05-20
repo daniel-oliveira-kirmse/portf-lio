@@ -1,30 +1,60 @@
 export const featuredProjects = [
   {
-    id: "atras-de-voce",
+    id: "focus-app",
+    title: "Focus App",
+    description:
+      "Aplicativo desktop para Windows focado em deep work, com timer de foco, bloqueador de distrações, dashboard de produtividade, histórico exportável e integração com Spotify.",
+    image: "/images/projets-images/eletronica-renovo.png",
+    tech: [".NET 8", "WPF", "SQLite", "MVVM", "Spotify API"],
+    githubUrl: "https://github.com/daniel-oliveira-kirmse/focus-app",
+  },
+  {
+    id: "analise-corredor-yolo",
+    title: "Análise de Corredor com YOLO",
+    description:
+      "Aplicação web para monitoramento inteligente de corredores com YOLOv8 Pose, rastreio em tempo real, análise biomecânica, exportação em Excel e geração automática de evidências em vídeo.",
+    image: "/images/projets-images/atras-de-voce.png",
+    tech: ["Python", "Flask", "YOLOv8", "OpenCV", "Openpyxl"],
+    githubUrl: "https://github.com/daniel-oliveira-kirmse/analise-corredor-yolo",
+  },
+  {
+    id: "webapp-stock-system",
+    title: "WebApp Stock System",
+    description:
+      "Sistema web de controle de estoque industrial com autenticação JWT, dashboard, CRUD de produtos, movimentações e frontend em Next.js integrado a API Express.",
+    image: "/images/projets-images/eletronica-renovo.png",
+    tech: ["Next.js", "React", "Node.js", "Express", "SQLite", "Tailwind"],
+    githubUrl: "https://github.com/daniel-oliveira-kirmse/webapp-stock-system",
+  },
+  {
+    id: "e-commerce",
+    title: "E-commerce",
+    description:
+      "Aplicação e-commerce publicada na Vercel, construída com stack moderna front-end e foco em experiência visual e navegação fluida.",
+    image: "/images/projets-images/e-commerce-tenis.png",
+    tech: ["TypeScript", "React", "Next.js", "Vercel"],
+    githubUrl: "https://github.com/daniel-oliveira-kirmse/e-commerce",
+  },
+];
+
+export const extraProjects = [
+  {
+    id: "jogo-3d-terror",
     title: "Jogo 3D Terror",
     description:
-      "Desenvolvimento de jogo 3D de terror em Unity com personagem perseguido por um monstro, foco em ambientação, tensão e comportamento do inimigo.",
+      "Projeto em Unity com ambientação de terror, perseguição por inimigo e foco em tensão, movimentação e construção de atmosfera.",
     image: "/images/projets-images/atras-de-voce.png",
     tech: ["Unity", "C#", "Game Animator"],
-    githubUrl: "https://github.com/daniel-oliveira-kirmse/atras-de-voce",
+    githubUrl: "https://github.com/daniel-oliveira-kirmse",
   },
   {
     id: "api-rest-flask",
     title: "API REST com Flask",
     description:
-      "API em Python Flask e SQLAlchemy para cadastro de um e-commerce de tênis, com modelagem relacional e endpoints de manutenção.",
+      "API desenvolvida em Python Flask e SQLAlchemy para cadastro e estruturação de dados de um e-commerce de tênis.",
     image: "/images/projets-images/e-commerce-tenis.png",
     tech: ["Flask", "Python", "SQLAlchemy"],
-    githubUrl: "https://github.com/daniel-oliveira-kirmse/api-rest-flask",
-  },
-  {
-    id: "gestao-comercial",
-    title: "Site de Gestão Comercial",
-    description:
-      "Aplicação web em Node.js e Express para gestão comercial de uma loja de eletrônica, com foco em rotinas administrativas e operação diária.",
-    image: "/images/projets-images/eletronica-renovo.png",
-    tech: ["Node.js", "Express", "MySQL"],
-    githubUrl: "https://github.com/daniel-oliveira-kirmse/eletronica-renovo",
+    githubUrl: "https://github.com/daniel-oliveira-kirmse",
   },
   {
     id: "robo-industrial",
@@ -32,37 +62,16 @@ export const featuredProjects = [
     description:
       "Protótipo com braço e garra robótica para fins industriais, desenvolvido com Arduino e alimentação por energia solar.",
     image: "/images/projets-images/projeto-arduino.jpg",
-    tech: ["Arduino", "C++", "IoT"],
-    githubUrl: "https://github.com/daniel-oliveira-kirmse/robo-industrial",
+    tech: ["Arduino", "Eletrônica", "IoT"],
+    githubUrl: "https://github.com/daniel-oliveira-kirmse",
   },
-];
-
-export const extraProjects = [
   {
     id: "portfolio-original",
     title: "Portfólio Original",
     description:
-      "Versão em HTML, CSS e JavaScript puro com a identidade visual brutalista que serviu de base para a migração.",
-    image: "/images/projets-images/atras-de-voce.png",
-    tech: ["HTML", "CSS", "JavaScript"],
-    githubUrl: "https://github.com/daniel-oliveira-kirmse",
-  },
-  {
-    id: "modulo-unity",
-    title: "Estudos em Unity",
-    description:
-      "Experimentos de mecânica, animação e ambientação 3D aplicados durante o módulo de desenvolvimento de jogos.",
-    image: "/images/projets-images/atras-de-voce.png",
-    tech: ["Unity", "C#", "3D"],
-    githubUrl: "https://github.com/daniel-oliveira-kirmse",
-  },
-  {
-    id: "automacao-arduino",
-    title: "Automação com Arduino",
-    description:
-      "Conjunto de testes e montagens focados em sensores, automação e prototipagem aplicada à eletrotécnica.",
-    image: "/images/projets-images/projeto-arduino.jpg",
-    tech: ["Arduino", "Eletrônica", "IoT"],
-    githubUrl: "https://github.com/daniel-oliveira-kirmse",
+      "Versão original do portfólio em HTML, CSS e JavaScript puro, publicada na Vercel e usada como base visual desta migração.",
+    image: "/images/projets-images/eletronica-renovo.png",
+    tech: ["HTML", "CSS", "JavaScript", "Vercel"],
+    githubUrl: "https://github.com/daniel-oliveira-kirmse/portf-lio",
   },
 ];
