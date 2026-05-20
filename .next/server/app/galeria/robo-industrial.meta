@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/galeria/layout,_N_T_/galeria/[slug]/layout,_N_T_/galeria/[slug]/page,_N_T_/galeria/robo-industrial"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/galeria/$d$slug/__PAGE__",
+    "/galeria/$d$slug",
+    "/galeria",
+    "/_index",
+    "/_head"
+  ]
+}

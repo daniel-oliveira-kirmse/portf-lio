@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { extraProjects, featuredProjects } from "@/data/projects";
 
@@ -151,18 +152,80 @@ function GithubIcon() {
   );
 }
 
-function ProjectLinks({ githubUrl }) {
+function ExternalIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" className="h-5 w-5" aria-hidden="true">
+      <path strokeWidth="2" d="M7 17 17 7M9 7h8v8" />
+      <path strokeWidth="2" d="M17 13v4H7V7h4" />
+    </svg>
+  );
+}
+
+function PhotoIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" className="h-5 w-5" aria-hidden="true">
+      <path strokeWidth="2" d="M4 7h4l2-2h4l2 2h4v12H4z" />
+      <circle cx="12" cy="13" r="3.5" strokeWidth="2" />
+    </svg>
+  );
+}
+
+function ActionButton({ href, children, disabled = false, variant = "solid", icon }) {
+  const baseClassName =
+    "inline-flex items-center gap-2 rounded-full border px-4 py-2 font-mono text-sm uppercase tracking-[0.08em] transition";
+
+  if (disabled) {
+    return (
+      <span className={`${baseClassName} cursor-not-allowed border-white/15 bg-white/5 text-white/45`}>
+        {icon}
+        {children}
+      </span>
+    );
+  }
+
+  if (href?.startsWith("/")) {
+    return (
+      <Link
+        href={href}
+        className={`${baseClassName} ${variant === "solid" ? "border-accent/30 bg-accent text-white hover:-translate-y-0.5 hover:bg-white hover:text-background" : "border-white/15 bg-transparent text-white hover:-translate-y-0.5 hover:border-accent hover:text-accent"}`}
+      >
+        {icon}
+        {children}
+      </Link>
+    );
+  }
+
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noreferrer"
+      className={`${baseClassName} ${variant === "solid" ? "border-accent/30 bg-accent text-white hover:-translate-y-0.5 hover:bg-white hover:text-background" : "border-white/15 bg-transparent text-white hover:-translate-y-0.5 hover:border-accent hover:text-accent"}`}
+    >
+      {icon}
+      {children}
+    </a>
+  );
+}
+
+function ProjectLinks({ githubUrl, siteUrl, gallerySlug, kind, hideGithub }) {
   return (
     <div className="mt-6 flex flex-wrap gap-3">
-      <a
-        href={githubUrl}
-        target="_blank"
-        rel="noreferrer"
-        className="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent px-4 py-2 font-mono text-sm uppercase tracking-[0.08em] text-white transition hover:-translate-y-0.5 hover:bg-white hover:text-background"
-      >
-        <GithubIcon />
-        Repositório
-      </a>
+      {kind === "site" ? (
+        <ActionButton href={siteUrl ?? undefined} disabled={!siteUrl} icon={<ExternalIcon />} variant="outline">
+          {siteUrl ? "Site" : "Site em breve"}
+        </ActionButton>
+      ) : null}
+      {gallerySlug ? (
+        <ActionButton href={`/galeria/${gallerySlug}`} icon={<PhotoIcon />} variant="outline">
+          Fotos
+        </ActionButton>
+      ) : null}
+      {!hideGithub ? (
+        <ActionButton href={githubUrl} icon={<GithubIcon />}>
+          Repositório
+        </ActionButton>
+      ) : null}
     </div>
   );
 }
@@ -515,7 +578,13 @@ export default function HomePage() {
                         </span>
                       ))}
                     </div>
-                    <ProjectLinks githubUrl={activeProject.githubUrl} />
+                    <ProjectLinks
+                      githubUrl={activeProject.githubUrl}
+                      siteUrl={activeProject.siteUrl}
+                      gallerySlug={activeProject.gallerySlug}
+                      kind={activeProject.kind}
+                      hideGithub={activeProject.hideGithub}
+                    />
                   </div>
                 </div>
               </div>
@@ -590,7 +659,13 @@ export default function HomePage() {
                             </span>
                           ))}
                         </div>
-                        <ProjectLinks githubUrl={project.githubUrl} />
+                        <ProjectLinks
+                          githubUrl={project.githubUrl}
+                          siteUrl={project.siteUrl}
+                          gallerySlug={project.gallerySlug}
+                          kind={project.kind}
+                          hideGithub={project.hideGithub}
+                        />
                       </div>
                     </article>
                   ))}

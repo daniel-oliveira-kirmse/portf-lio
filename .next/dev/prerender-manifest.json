@@ -1,11 +1,1 @@
-{
-  "version": 4,
-  "routes": {},
-  "dynamicRoutes": {},
-  "notFoundRoutes": [],
-  "preview": {
-    "previewModeId": "6d1a1ed2c0ead883b9b7723f549a82fa",
-    "previewModeSigningKey": "ea1614223482febf7af5086e3ca165b820e2f30b8d440ff468f2276a08349447",
-    "previewModeEncryptionKey": "718e572af9982df7b0e3625ffc94f05a0d2b65013023cd8097a973450212b82b"
-  }
-}
+{"version":4,"routes":{"/galeria/focus-app":{},"/galeria/robo-industrial":{}},"dynamicRoutes":{"/galeria/[slug]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/galeria/[slug]","routeRegex":"^\\/galeria\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"a1c68779898263537b395476f39e675c","previewModeSigningKey":"b78af47884bdd53b347c1f2569e24e05e735cef2adf7dba386b3c4f61f457300","previewModeEncryptionKey":"be166df2a087580290325568d43de975269f711fd7c6d3ce09d5e82c06a35154"}}
